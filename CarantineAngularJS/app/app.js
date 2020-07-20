@@ -4,6 +4,8 @@ app.controller('CarantineController', function () {
 
     this.state = "STOPPED";
 
+    this.speed = 0;
+
     this.up = function () { console.log("up"); };
     this.down = function () { console.log("down"); };
     this.left = function () { console.log("left"); };

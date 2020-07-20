@@ -143,6 +143,10 @@
     </None>
     <Content Include="css\grid.scss" />
     <Content Include="css\variables.scss" />
+    <Content Include="css\sensors.scss" />
+    <Content Include="css\state_display.scss" />
+    <Content Include="css\general_styles.scss" />
+    <Content Include="css\button_display.scss" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

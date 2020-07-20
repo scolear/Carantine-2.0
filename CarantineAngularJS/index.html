@@ -9,24 +9,26 @@
     <script src="Scripts/angular.min.js"></script>
     <script src="app/app.js"></script>
 
-</head>
+</head> 
 <body>
     <div ng-controller="CarantineController as $ctrl" class="container">
+        <header class="main-header"></header>
         <div class="sensor-display">
             <span class="sensor"> {{$ctrl.sensors[0].value}} </span>
             <span class="sensor"> {{$ctrl.sensors[1].value}} </span>
             <span class="sensor"> {{$ctrl.sensors[2].value}} </span>
         </div>
         <div class="state-display">
-            <p class="state"> state: {{$ctrl.state}} </p>
+            <p class="display-wrapper"> STATE: <span class="display"> {{$ctrl.state}} </span> </p>
+            <p class="display-wrapper"> SPEED: <span class="display"> {{$ctrl.speed}} </span> </p>
         </div>
 
         <div class="control-buttons">
-            <button ng-click="$ctrl.up()">🡑</button>
-            <button ng-click="$ctrl.down()">🡓</button>
-            <button ng-click="$ctrl.left()">🡐</button>
-            <button ng-click="$ctrl.right()">🡒</button>
-            <button ng-click="$ctrl.stop()">STOP</button>
+            <button class="direction-button" id="up" ng-click="$ctrl.up()">🡑</button>
+            <button class="direction-button" id="down" ng-click="$ctrl.down()">🡓</button>
+            <button class="direction-button" id="left" ng-click="$ctrl.left()">🡐</button>
+            <button class="direction-button" id="right" ng-click="$ctrl.right()">🡒</button>
+            <button class="direction-button" id="stop" ng-click="$ctrl.stop()">STOP</button>
         </div>
     </div>
 </body>

@@ -1,3 +1,65 @@
 ﻿.container {
     display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-row-gap: 2rem;
+    grid-template-areas:
+        "header"
+        "sensors"
+        "state"
+        "buttons";
+}
+
+.main-header {
+    grid-area: header;
+    justify-self: center;
+}
+
+.sensor-display {
+    grid-area: sensors;
+    justify-self: center;
+}
+
+.state-display {
+    grid-area: state;
+    justify-self: center;
+}
+
+.control-buttons {
+    grid-area: buttons;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-areas:
+        ". up ."
+        "left down right"
+        "stop stop stop";
+}
+
+.direction-button {
+    width: 70px;
+    height: 70px;
+}
+
+#up {
+    grid-area: up;
+}
+
+#down {
+    grid-area: down;
+}
+
+#left {
+    grid-area: left;
+}
+
+#right {
+    grid-area: right;
+}
+
+#stop {
+    grid-area: stop;
+    width: auto;
 }
